@@ -1,3 +1,4 @@
+import 'package:chipchip/features/auth/screens/login.dart';
 import 'package:chipchip/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: const Scaffold(),
+      home: const Login(),
     );
   }
 }
