@@ -46,49 +46,68 @@ class Login extends StatelessWidget {
                           color: Colors.black),
                     ),
                     // input form for email
-                    Form(
-                      child: Column(
-                        children: [
-                          /// EMAIL
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            margin: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(32)),
-                                border:
-                                    Border.all(color: TColors.grey, width: 1)),
-                            child: TextFormField(
-                              decoration: const InputDecoration(
-                                border: InputBorder.none,
-                                labelText: 'Email here',
+                    Container(
+                      margin: const EdgeInsets.only(top: 13),
+                      child: Form(
+                        child: Column(
+                          children: [
+                            /// EMAIL
+                            Container(
+                              padding: const EdgeInsets.all(5),
+                              // margin: const EdgeInsets.all(5),
+                              decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(32)),
+                                  border: Border.all(
+                                      color: TColors.grey, width: 1)),
+                              child: TextFormField(
+                                decoration: const InputDecoration(
+                                  border: InputBorder.none,
+                                  labelText: 'Email here',
+                                ),
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 35,
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            margin: const EdgeInsets.only(bottom: 5),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(32)),
-                                border:
-                                    Border.all(color: TColors.grey, width: 1)),
-                            child: TextFormField(
-                              decoration: const InputDecoration(
-                                border: InputBorder.none,
-                                labelText: 'Password here',
+                            const SizedBox(
+                              height: 35,
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(5),
+                              margin: const EdgeInsets.only(bottom: 5),
+                              decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(32)),
+                                  border: Border.all(
+                                      color: TColors.grey, width: 1)),
+                              child: TextFormField(
+                                decoration: const InputDecoration(
+                                    border: InputBorder.none,
+                                    labelText: 'Password here',
+                                    suffixIcon:
+                                        Icon(Icons.remove_red_eye_sharp)),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                  onPressed: () {},
-                                  child: const Text('Sign In')))
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: SizedBox(
+                                  width: double.infinity,
+                                  child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        side: const BorderSide(
+                                            width: 0,
+                                            color: Colors.transparent),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(32)),
+                                        elevation: 0,
+                                        shadowColor: TColors.lightYellow,
+                                        backgroundColor: TColors.lightYellow,
+                                        foregroundColor: Colors.black,
+                                      ),
+                                      onPressed: () {},
+                                      child: const Text('Sign In'))),
+                            )
+                          ],
+                        ),
                       ),
                     )
                     // login button
