@@ -1,3 +1,4 @@
+import 'package:chipchip/utils/constants/colors.dart';
 import 'package:chipchip/utils/theme/custom/appbar_theme.dart';
 import 'package:chipchip/utils/theme/custom/bottom_sheet_theme.dart';
 import 'package:chipchip/utils/theme/custom/check_box_theme.dart';
@@ -10,7 +11,7 @@ class TAppTheme {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
-    primaryColor: Colors.blueAccent,
+    primaryColor: TColors.lightYellow,
     scaffoldBackgroundColor: Colors.white,
     textTheme: TTextTheme.lightTextTheme,
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,

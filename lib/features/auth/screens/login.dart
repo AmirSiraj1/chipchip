@@ -29,16 +29,16 @@ class Login extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width,
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 35),
+                    const EdgeInsets.symmetric(horizontal: 18, vertical: 35),
                 decoration: const BoxDecoration(
                     color: TColors.white,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(24))),
-                child: const Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // sign in text
-                    Text(
+                    const Text(
                       'Sign In',
                       style: TextStyle(
                           fontSize: 23,
@@ -46,8 +46,51 @@ class Login extends StatelessWidget {
                           color: Colors.black),
                     ),
                     // input form for email
-
-                    // input form for password
+                    Form(
+                      child: Column(
+                        children: [
+                          /// EMAIL
+                          Container(
+                            padding: const EdgeInsets.all(5),
+                            margin: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(32)),
+                                border:
+                                    Border.all(color: TColors.grey, width: 1)),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                labelText: 'Email here',
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 35,
+                          ),
+                          Container(
+                            padding: const EdgeInsets.all(5),
+                            margin: const EdgeInsets.only(bottom: 5),
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(32)),
+                                border:
+                                    Border.all(color: TColors.grey, width: 1)),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                labelText: 'Password here',
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                  onPressed: () {},
+                                  child: const Text('Sign In')))
+                        ],
+                      ),
+                    )
                     // login button
                   ],
                 ),
